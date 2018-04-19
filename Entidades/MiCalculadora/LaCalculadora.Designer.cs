@@ -1,6 +1,6 @@
 ﻿namespace MiCalculadora
 {
-    partial class Form1
+    partial class LaCalculadora
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -41,7 +41,7 @@
             // 
             // btnOperar
             // 
-            this.btnOperar.Location = new System.Drawing.Point(43, 106);
+            this.btnOperar.Location = new System.Drawing.Point(12, 117);
             this.btnOperar.Name = "btnOperar";
             this.btnOperar.Size = new System.Drawing.Size(111, 37);
             this.btnOperar.TabIndex = 0;
@@ -51,9 +51,9 @@
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(188, 106);
+            this.btnLimpiar.Location = new System.Drawing.Point(140, 117);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(114, 37);
+            this.btnLimpiar.Size = new System.Drawing.Size(121, 37);
             this.btnLimpiar.TabIndex = 1;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = true;
@@ -61,7 +61,7 @@
             // 
             // btnCerrar
             // 
-            this.btnCerrar.Location = new System.Drawing.Point(331, 106);
+            this.btnCerrar.Location = new System.Drawing.Point(282, 117);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(111, 37);
             this.btnCerrar.TabIndex = 2;
@@ -71,7 +71,7 @@
             // 
             // btnConvABinario
             // 
-            this.btnConvABinario.Location = new System.Drawing.Point(43, 162);
+            this.btnConvABinario.Location = new System.Drawing.Point(12, 160);
             this.btnConvABinario.Name = "btnConvABinario";
             this.btnConvABinario.Size = new System.Drawing.Size(185, 39);
             this.btnConvABinario.TabIndex = 3;
@@ -81,9 +81,9 @@
             // 
             // btnConvADecimal
             // 
-            this.btnConvADecimal.Location = new System.Drawing.Point(260, 162);
+            this.btnConvADecimal.Location = new System.Drawing.Point(208, 160);
             this.btnConvADecimal.Name = "btnConvADecimal";
-            this.btnConvADecimal.Size = new System.Drawing.Size(182, 39);
+            this.btnConvADecimal.Size = new System.Drawing.Size(185, 39);
             this.btnConvADecimal.TabIndex = 4;
             this.btnConvADecimal.Text = "Convertir a Decimal";
             this.btnConvADecimal.UseVisualStyleBackColor = true;
@@ -92,14 +92,14 @@
             // lblResultado
             // 
             this.lblResultado.AutoSize = true;
-            this.lblResultado.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblResultado.Location = new System.Drawing.Point(336, 9);
+            this.lblResultado.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResultado.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblResultado.Location = new System.Drawing.Point(278, 18);
             this.lblResultado.Name = "lblResultado";
-            this.lblResultado.Size = new System.Drawing.Size(106, 37);
+            this.lblResultado.Size = new System.Drawing.Size(66, 24);
             this.lblResultado.TabIndex = 5;
             this.lblResultado.Text = "label1";
             this.lblResultado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblResultado.Click += new System.EventHandler(this.lblResultado_Click);
             // 
             // comboBox1
             // 
@@ -110,38 +110,35 @@
             "-",
             "/",
             "*"});
-            this.comboBox1.Location = new System.Drawing.Point(181, 51);
+            this.comboBox1.Location = new System.Drawing.Point(140, 66);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.comboBox1.Size = new System.Drawing.Size(121, 45);
             this.comboBox1.TabIndex = 7;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // textNumero1
             // 
             this.textNumero1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textNumero1.Location = new System.Drawing.Point(43, 51);
+            this.textNumero1.Location = new System.Drawing.Point(12, 66);
             this.textNumero1.Name = "textNumero1";
             this.textNumero1.Size = new System.Drawing.Size(111, 44);
             this.textNumero1.TabIndex = 8;
             this.textNumero1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textNumero1.TextChanged += new System.EventHandler(this.textNumero1_TextChanged);
             // 
             // textNumero2
             // 
             this.textNumero2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textNumero2.Location = new System.Drawing.Point(331, 51);
+            this.textNumero2.Location = new System.Drawing.Point(282, 67);
             this.textNumero2.Name = "textNumero2";
             this.textNumero2.Size = new System.Drawing.Size(111, 44);
             this.textNumero2.TabIndex = 9;
             this.textNumero2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textNumero2.TextChanged += new System.EventHandler(this.textNumero2_TextChanged);
             // 
-            // Form1
+            // LaCalculadora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(501, 235);
+            this.ClientSize = new System.Drawing.Size(416, 211);
             this.Controls.Add(this.textNumero2);
             this.Controls.Add(this.textNumero1);
             this.Controls.Add(this.comboBox1);
@@ -152,7 +149,7 @@
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnOperar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "Form1";
+            this.Name = "LaCalculadora";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calculadora de Sergio Hernan Carbone del curso 2 C";
             this.TransparencyKey = System.Drawing.Color.Red;

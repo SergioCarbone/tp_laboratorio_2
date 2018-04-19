@@ -20,3 +20,8 @@ F:\Entidades\Entidades\obj\Debug\Entidades.csproj.GenerateResource.cache
 F:\Entidades\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
 F:\Entidades\Entidades\obj\Debug\Entidades.exe
 F:\Entidades\Entidades\obj\Debug\Entidades.pdb
+E:\Entidades\Entidades\bin\Debug\Entidades.exe
+E:\Entidades\Entidades\bin\Debug\Entidades.pdb
+E:\Entidades\Entidades\obj\Debug\Entidades.csprojResolveAssemblyReference.cache
+E:\Entidades\Entidades\obj\Debug\Entidades.MiCalculadora.resources
+E:\Entidades\Entidades\obj\Debug\Entidades.csproj.GenerateResource.Cache

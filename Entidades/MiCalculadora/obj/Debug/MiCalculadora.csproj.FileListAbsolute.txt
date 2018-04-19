@@ -5,10 +5,10 @@ F:\Entidades\MiCalculadora\bin\Debug\Entidades.exe
 F:\Entidades\MiCalculadora\bin\Debug\Entidades.pdb
 F:\Entidades\MiCalculadora\bin\Debug\Entidades.exe.config
 F:\Entidades\MiCalculadora\obj\Debug\MiCalculadora.csprojResolveAssemblyReference.cache
-F:\Entidades\MiCalculadora\obj\Debug\MiCalculadora.Form1.resources
 F:\Entidades\MiCalculadora\obj\Debug\MiCalculadora.Properties.Resources.resources
 F:\Entidades\MiCalculadora\obj\Debug\MiCalculadora.csproj.GenerateResource.cache
 F:\Entidades\MiCalculadora\obj\Debug\MiCalculadora.csproj.CoreCompileInputs.cache
 F:\Entidades\MiCalculadora\obj\Debug\MiCalculadora.csproj.CopyComplete
 F:\Entidades\MiCalculadora\obj\Debug\MiCalculadora.exe
 F:\Entidades\MiCalculadora\obj\Debug\MiCalculadora.pdb
+F:\Entidades\MiCalculadora\obj\Debug\MiCalculadora.LaCalculadora.resources

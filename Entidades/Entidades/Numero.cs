@@ -8,22 +8,31 @@ namespace Entidades
 {
     public class Numero
     {
-        double numero;
+        private double numero;
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="numero"></param>
-        private void setNumero(string numero)
+        private string SetNumero
         {
-            this.numero = ValidarNumero(numero);
+            set
+            {
+                this.numero = ValidarNumero(value);
+            }
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="strNumero"></param>
-        /// <returns></returns>
+
+        public Numero()
+        {
+        }
+
+        public Numero(double numero)
+        {
+            this.numero = numero;
+        }
+
+        public Numero(string numero)
+        {
+            this.SetNumero = numero;
+        }
+
         private double ValidarNumero(string strNumero)
         {
             double auxiliar, retorno;
@@ -111,6 +120,30 @@ namespace Entidades
                 }
             }
             return resBinario;
+        }
+
+        public static double operator + (Numero valor1, Numero valor2)
+        {
+            double retorno = valor1 + valor2;
+            return retorno;
+        }
+
+        public static double operator - (Numero valor1, Numero valor2)
+        {
+            double retorno = valor1 - valor2;
+            return retorno;
+        }
+
+        public static double operator / (Numero valor1, Numero valor2)
+        {
+            double retorno = valor1 / valor2;
+            return retorno;
+        }
+
+        public static double operator * (Numero valor1, Numero valor2)
+        {
+            double retorno = valor1 * valor2;
+            return retorno;
         }
     }
 }
