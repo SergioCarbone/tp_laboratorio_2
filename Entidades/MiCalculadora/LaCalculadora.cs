@@ -24,14 +24,6 @@ namespace MiCalculadora
             this.MaximizeBox = false;
         }
 
-        private double Operar(string valor1, string valor2, string operador)
-        {
-            double numero1 = Convert.ToDouble(valor1);
-            double numero2 = Convert.ToDouble(valor2);
-            double resultado = Entidades.Calculadora.Operar(numero1, numero2, operador);
-
-            return resultado;
-        }
 
         private void btnOperar_Click(object sender, EventArgs e)
         {
@@ -46,6 +38,7 @@ namespace MiCalculadora
                     if(operacion == "/" && textNumero2.Text == "0")
                     {
                         lblResultado.Text = "Op. no válida";
+                        
                     }
                     else
                     {
@@ -67,10 +60,7 @@ namespace MiCalculadora
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
-            lblResultado.Text = "";
-            textNumero1.Text = "";
-            textNumero2.Text = "";
-            comboBox1.Text = "";
+            Limpiar();
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -103,5 +93,25 @@ namespace MiCalculadora
                 lblResultado.Text = "No erea\n binario";
             }
         }
+
+
+        public void Limpiar()
+        {
+            lblResultado.Text = "";
+            textNumero1.Text = "";
+            textNumero2.Text = "";
+            comboBox1.Text = "";
+        }
+
+
+        private static double Operar(string valor1, string valor2, string operador)
+        {
+            double numero1 = Convert.ToDouble(valor1);
+            double numero2 = Convert.ToDouble(valor2);
+            double resultado = Entidades.Calculadora.Operar(numero1, numero2, operador);
+
+            return resultado;
+        }
+
     }
 }
