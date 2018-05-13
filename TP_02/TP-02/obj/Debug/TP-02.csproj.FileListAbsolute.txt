@@ -24,3 +24,13 @@ C:\Users\PB\Desktop\Esquema-TP-02\TP-02\TP-02\bin\Debug\TP-02.pdb
 C:\Users\PB\Desktop\Esquema-TP-02\TP-02\TP-02\bin\Debug\Entidades.dll
 C:\Users\PB\Desktop\Esquema-TP-02\TP-02\TP-02\bin\Debug\Entidades.pdb
 C:\Users\PB\Desktop\Esquema-TP-02\TP-02\TP-02\obj\Debug\TP-02.csproj.CopyComplete
+C:\Users\PB\Documents\GitHub\tp_laboratorio_2\TP_02\TP-02\bin\Debug\TP-02.exe.config
+C:\Users\PB\Documents\GitHub\tp_laboratorio_2\TP_02\TP-02\bin\Debug\TP-02.exe
+C:\Users\PB\Documents\GitHub\tp_laboratorio_2\TP_02\TP-02\bin\Debug\TP-02.pdb
+C:\Users\PB\Documents\GitHub\tp_laboratorio_2\TP_02\TP-02\bin\Debug\Entidades.dll
+C:\Users\PB\Documents\GitHub\tp_laboratorio_2\TP_02\TP-02\bin\Debug\Entidades.pdb
+C:\Users\PB\Documents\GitHub\tp_laboratorio_2\TP_02\TP-02\obj\Debug\TP-02.csprojResolveAssemblyReference.cache
+C:\Users\PB\Documents\GitHub\tp_laboratorio_2\TP_02\TP-02\obj\Debug\TP-02.csproj.CoreCompileInputs.cache
+C:\Users\PB\Documents\GitHub\tp_laboratorio_2\TP_02\TP-02\obj\Debug\TP-02.csproj.CopyComplete
+C:\Users\PB\Documents\GitHub\tp_laboratorio_2\TP_02\TP-02\obj\Debug\TP-02.exe
+C:\Users\PB\Documents\GitHub\tp_laboratorio_2\TP_02\TP-02\obj\Debug\TP-02.pdb
