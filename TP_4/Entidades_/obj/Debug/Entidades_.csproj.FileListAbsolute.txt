@@ -1,6 +1,0 @@
-E:\Trabajos Practicos\TP_4\Entidades_\obj\Debug\Entidades_.csproj.CoreCompileInputs.cache
-E:\Trabajos Practicos\TP_4\Entidades_\bin\Debug\Entidades_.dll
-E:\Trabajos Practicos\TP_4\Entidades_\bin\Debug\Entidades_.pdb
-E:\Trabajos Practicos\TP_4\Entidades_\obj\Debug\Entidades_.dll
-E:\Trabajos Practicos\TP_4\Entidades_\obj\Debug\Entidades_.pdb
-E:\Trabajos Practicos\TP_4\Entidades_\obj\Debug\Entidades_.csprojResolveAssemblyReference.cache
