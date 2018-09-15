@@ -1,0 +1,13 @@
+E:\Programacion 2\Tp1\TP_1\Entidades\bin\Debug\Entidades.exe.config
+E:\Programacion 2\Tp1\TP_1\Entidades\bin\Debug\Entidades.exe
+E:\Programacion 2\Tp1\TP_1\Entidades\bin\Debug\Entidades.pdb
+E:\Programacion 2\Tp1\TP_1\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+E:\Programacion 2\Tp1\TP_1\Entidades\obj\Debug\Entidades.exe
+E:\Programacion 2\Tp1\TP_1\Entidades\obj\Debug\Entidades.pdb
+C:\Users\Uusario\Desktop\Copia pen\Programacion 2\Tp1\TP_1\Entidades\bin\Debug\Entidades.exe.config
+C:\Users\Uusario\Desktop\Copia pen\Programacion 2\Tp1\TP_1\Entidades\bin\Debug\Entidades.exe
+C:\Users\Uusario\Desktop\Copia pen\Programacion 2\Tp1\TP_1\Entidades\bin\Debug\Entidades.pdb
+C:\Users\Uusario\Desktop\Copia pen\Programacion 2\Tp1\TP_1\Entidades\obj\Debug\Entidades.csprojResolveAssemblyReference.cache
+C:\Users\Uusario\Desktop\Copia pen\Programacion 2\Tp1\TP_1\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\Uusario\Desktop\Copia pen\Programacion 2\Tp1\TP_1\Entidades\obj\Debug\Entidades.exe
+C:\Users\Uusario\Desktop\Copia pen\Programacion 2\Tp1\TP_1\Entidades\obj\Debug\Entidades.pdb
