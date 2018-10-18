@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2015
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClasesAbstractas", "ClasesAbstractas\ClasesAbstractas.csproj", "{506A316F-F27F-4CF7-A667-05C98BFC2C00}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntidadesAbstractas", "ClasesAbstractas\EntidadesAbstractas.csproj", "{506A316F-F27F-4CF7-A667-05C98BFC2C00}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Archivos", "Archivos\Archivos.csproj", "{AC9907AF-8548-405D-9E25-B50B6BAF3B85}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClasesInstanciables", "ClasesInstanciables\ClasesInstanciables.csproj", "{172E6C68-BEF4-4052-8D66-698E089301E0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Excepciones", "Excepciones\Excepciones.csproj", "{5107E454-3BB9-45C8-97F9-6AF80053A1C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Consola", "Consola\Consola.csproj", "{2A0B3C24-A08C-4B83-BB5A-C03637C75146}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{5107E454-3BB9-45C8-97F9-6AF80053A1C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5107E454-3BB9-45C8-97F9-6AF80053A1C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5107E454-3BB9-45C8-97F9-6AF80053A1C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A0B3C24-A08C-4B83-BB5A-C03637C75146}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A0B3C24-A08C-4B83-BB5A-C03637C75146}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A0B3C24-A08C-4B83-BB5A-C03637C75146}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A0B3C24-A08C-4B83-BB5A-C03637C75146}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

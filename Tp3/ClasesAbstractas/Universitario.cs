@@ -15,9 +15,9 @@ namespace EntidadesAbstractas
         public override bool Equals(object obj)
         {
             bool retorno = false;
-            if(obj is Persona)
+            if (obj is Persona)
             {
-                if(this == (Universitario)obj)
+                if (this == (Universitario)obj)
                 {
                     retorno = true;
                 }
@@ -32,7 +32,7 @@ namespace EntidadesAbstractas
         /// <returns></returns>
         protected virtual string MostrarDatos()
         {
-            StringBuilder datos = new StringBuilder(ToString());
+            StringBuilder datos = new StringBuilder(base.ToString());           
             datos.AppendFormat("\nlegajo: {0}", this.legajo);
             return datos.ToString();
         }
@@ -47,7 +47,7 @@ namespace EntidadesAbstractas
         public static bool operator ==(Universitario pg1, Universitario pg2)
         {
             bool retorno = false;
-            if(pg1.legajo == pg2.legajo || pg1.DNI == pg2.DNI)
+            if (!(pg1 is null) && !(pg2 is null) && pg1.legajo == pg2.legajo && pg1.DNI == pg2.DNI)
             {
                 retorno = true;
             }

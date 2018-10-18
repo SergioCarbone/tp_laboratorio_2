@@ -8,7 +8,7 @@ using EntidadesAbstractas;
 
 namespace ClasesInstanciables
 {
-    sealed class Profesor : Universitario
+    sealed public class Profesor : Universitario
     {
         private Queue<Universidad.EClases> clasesDelDia;
         private static Random random;
@@ -88,15 +88,15 @@ namespace ClasesInstanciables
 
         private Profesor()
         {
-            clasesDelDia = new Queue<Universidad.EClases>();
-            RandomClases();
+            
         }
 
 
         public Profesor(int id, string nombre, string apellido, string dni, ENacionalidad nacionalidad)
             : base(id,nombre,apellido,dni,nacionalidad)
         {
-
+            clasesDelDia = new Queue<Universidad.EClases>();
+            RandomClases();
         }
 
         /// <summary>

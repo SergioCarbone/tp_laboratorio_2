@@ -8,7 +8,7 @@ using Excepciones;
 
 namespace ClasesInstanciables
 {
-    sealed class Alumno : Universitario
+    public sealed class Alumno : Universitario
     {
         private Universidad.EClases claseQueToma;
         private EEstadoCuenta estadoCuenta;
@@ -20,14 +20,14 @@ namespace ClasesInstanciables
         }
 
         public Alumno(int id, string nombre, string apellido, string dni, ENacionalidad nacionalidad, Universidad.EClases claseQueToma)
-            : base(id,nombre,apellido,dni,nacionalidad)
+            : base(id, nombre, apellido, dni, nacionalidad)
         {
             this.claseQueToma = claseQueToma;
         }
 
 
-        public Alumno(int id, string nombre, string apellido, string dni, ENacionalidad nacionalidad, Universidad.EClases claseQueToma,EEstadoCuenta estadoCuenta)
-            : this(id,nombre,apellido,dni,nacionalidad,claseQueToma)
+        public Alumno(int id, string nombre, string apellido, string dni, Universitario.ENacionalidad nacionalidad, Universidad.EClases claseQueToma, EEstadoCuenta estadoCuenta)
+            : this(id, nombre, apellido, dni, nacionalidad, claseQueToma)
         {
             this.estadoCuenta = estadoCuenta;
         }
@@ -39,9 +39,10 @@ namespace ClasesInstanciables
         /// <returns></returns>
         protected override string MostrarDatos()
         {
-            StringBuilder datos = new StringBuilder(base.MostrarDatos());
+            StringBuilder datos = new StringBuilder();
+            datos.AppendLine(base.MostrarDatos());
             datos.Append(ParticiparEnClase());
-            return datos.ToString();
+            return datos.ToString();            
         }
 
 

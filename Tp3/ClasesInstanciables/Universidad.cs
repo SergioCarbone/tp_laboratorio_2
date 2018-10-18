@@ -157,16 +157,15 @@ namespace ClasesInstanciables
 
         public static Profesor operator ==(Universidad uni, Universidad.EClases clase)
         {
-            Profesor p = null;
+            Profesor p = null;            
             foreach (Jornada aux in uni.jornadas)
-            {
+            {                
                 if(aux.Clases == clase)
                 {
                     p = aux.Instructor;
-                    break;
                 }
             }
-            if(p == null)
+            if(p is null)
             {
                 throw new SinProfesorException();
             }
@@ -243,10 +242,10 @@ namespace ClasesInstanciables
         }
 
 
-        //public override string ToString()
-        //{
-        //    return Universidad.MostrarDatos();
-        //}
+        public override string ToString()
+        {
+            return Universidad.MostrarDatos(this);
+        }
         #endregion
 
 

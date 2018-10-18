@@ -102,7 +102,7 @@ namespace EntidadesAbstractas
                 {
                     if(ValidarDni(this.Nacionalidad, value) != "")
                     {
-                        this.dni = Convert.ToInt16(value);
+                        this.dni = Convert.ToInt32(value);
                     }
                 }
                 catch(DniInvalidoException w)
@@ -195,7 +195,7 @@ namespace EntidadesAbstractas
             string retorno = "";
             int aux;
 
-            for (int i = 0; i <= dato.Length; i++)
+            for (int i = 0; i < dato.Length; i++)
             {
                 if (!(char.IsNumber(dato[i])))
                 {
