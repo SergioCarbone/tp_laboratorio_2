@@ -110,6 +110,10 @@ namespace ClasesInstanciables
             return datos.ToString();
         }
 
+        public string mostrarDatos()
+        {
+            return ToString();
+        }
 
         //public bool Guardar(Jornada jornada)
         //{
@@ -119,8 +123,10 @@ namespace ClasesInstanciables
 
         //public string Leer()
         //{
-
+        //    return ToString();
         //}
+
+        
         #endregion
     }
 }

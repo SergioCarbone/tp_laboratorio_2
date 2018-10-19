@@ -84,6 +84,10 @@ namespace ClasesInstanciables
         private static string MostrarDatos(Universidad uni)
         {
             StringBuilder datos = new StringBuilder();
+            foreach (Jornada aux in uni.Jornadas)
+            {
+                datos.AppendLine(aux.mostrarDatos());
+            }
             return datos.ToString();
         }
 
@@ -156,20 +160,15 @@ namespace ClasesInstanciables
 
 
         public static Profesor operator ==(Universidad uni, Universidad.EClases clase)
-        {
-            Profesor p = null;            
-            foreach (Jornada aux in uni.jornadas)
+        {                                   
+            foreach (Profesor aux in uni.profesores)
             {                
-                if(aux.Clases == clase)
+                if(aux == clase)
                 {
-                    p = aux.Instructor;
+                    return aux;
                 }
             }
-            if(p is null)
-            {
-                throw new SinProfesorException();
-            }
-            return p;
+            throw new SinProfesorException();
         }
 
 

@@ -41,6 +41,7 @@ namespace ClasesInstanciables
         {
             StringBuilder datos = new StringBuilder();
             datos.AppendLine(base.MostrarDatos());
+            datos.AppendFormat("\nEstado de cuenta: {0}", this.estadoCuenta);
             datos.Append(ParticiparEnClase());
             return datos.ToString();            
         }
@@ -55,7 +56,7 @@ namespace ClasesInstanciables
         public static bool operator ==(Alumno a, Universidad.EClases clase)
         {
             bool retorno = false;
-            if(a.claseQueToma == clase && a.estadoCuenta == EEstadoCuenta.Deudor)
+            if(a.claseQueToma == clase && a.estadoCuenta != EEstadoCuenta.Deudor)
             {
                 retorno = true;
             }
@@ -86,7 +87,7 @@ namespace ClasesInstanciables
         /// <returns></returns>
         protected override string ParticiparEnClase()
         {
-            return string.Format("TOMA CLASE DE {0}", this.claseQueToma);
+            return string.Format("\nTOMA CLASE DE {0}", this.claseQueToma);
         }
 
 

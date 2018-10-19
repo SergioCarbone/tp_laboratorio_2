@@ -67,7 +67,7 @@ namespace Consola
 
             Profesor i2 = new Profesor(2, "Roberto", "Juarez", "32234456", EntidadesAbstractas.Persona.ENacionalidad.Argentino);
 
-            gim += i2;
+            gim += i2;            
 
             try
             {
@@ -105,7 +105,7 @@ namespace Consola
                 Console.WriteLine(e.Message);
             }
             Console.WriteLine(gim.ToString());
-
+          
             Console.ReadKey();
             Console.Clear();
 
@@ -118,18 +118,20 @@ namespace Consola
             {
                 Console.WriteLine(e.Message);
             }
-
+            
             try
             {
                 int jornada = 0;
                 // Jornada.Guardar(gim[jornada]);
-                Console.WriteLine("Archivo de Jornada {0} guardado.", jornada);
-                //Console.WriteLine(Jornada.Leer()); 
+                //Console.WriteLine("Archivo de Jornada {0} guardado.", jornada);
+                //Console.WriteLine(Jornada.Leer());
+                
             }
             catch (ArchivosException e)
             {
                 Console.WriteLine(e.Message);
             }
+            
             Console.ReadKey();
         }
     }
