@@ -14,6 +14,8 @@ namespace Consola
     {
         static void Main(string[] args)
         {
+            Console.ForegroundColor = ConsoleColor.Green;
+
             Universidad gim = new Universidad();
             Alumno a1 = new Alumno(1, "Juan", "Lopez", "12234456", Persona.ENacionalidad.Argentino,
                 Universidad.EClases.Programacion, Alumno.EEstadoCuenta.Becado);

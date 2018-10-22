@@ -33,7 +33,7 @@ namespace ClasesInstanciables
         protected override string MostrarDatos()
         {
             StringBuilder datos = new StringBuilder();
-            datos.AppendFormat("{0} por {1}",ParticiparEnClase(),base.MostrarDatos());
+            datos.AppendFormat("\nClase de {0} por {1} {2}",this.ParticiparEnClase(),this.Nombre, this.Apellido);
             return datos.ToString();
         }
 
@@ -76,7 +76,12 @@ namespace ClasesInstanciables
         /// <returns></returns>
         protected override string ParticiparEnClase()
         {
-            return string.Format("CLASES DE {0}", this.clasesDelDia);
+            StringBuilder clase = new StringBuilder();
+            foreach (Universidad.EClases aux in this.clasesDelDia)
+            {
+                clase.AppendFormat("{0}", aux);
+            }                           
+            return clase.ToString();
         }
 
 

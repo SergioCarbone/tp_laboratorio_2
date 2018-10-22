@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Excepciones;
 
 namespace EntidadesAbstractas
 {
@@ -20,6 +21,10 @@ namespace EntidadesAbstractas
                 if (this == (Universitario)obj)
                 {
                     retorno = true;
+                }
+                else
+                {
+                    throw new AlumnoRepetidoException();
                 }
             }
             return retorno;
@@ -47,10 +52,11 @@ namespace EntidadesAbstractas
         public static bool operator ==(Universitario pg1, Universitario pg2)
         {
             bool retorno = false;
-            if (!(pg1 is null) && !(pg2 is null) && pg1.legajo == pg2.legajo && pg1.DNI == pg2.DNI)
+            if (!(pg1 is null) && !(pg2 is null) && pg1.legajo == pg2.legajo || pg1.DNI == pg2.DNI)
             {
                 retorno = true;
             }
+            
             return retorno;
         }
 

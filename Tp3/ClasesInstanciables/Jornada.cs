@@ -103,6 +103,7 @@ namespace ClasesInstanciables
         public override string ToString()
         {
             StringBuilder datos = new StringBuilder();
+            
             foreach (Alumno aux in alumnos)
             {
                 datos.AppendFormat("{0}", aux.ToString());

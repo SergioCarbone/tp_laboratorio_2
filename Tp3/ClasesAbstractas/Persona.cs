@@ -217,7 +217,7 @@ namespace EntidadesAbstractas
                 }
                 else
                 {
-                    throw new NacionalidadInvalidaException("Error, no coincide nacionalidad y rango de dni");
+                    throw new NacionalidadInvalidaException("La nacionalidad no se condice con el número de DNI");
                 }
             }
             else

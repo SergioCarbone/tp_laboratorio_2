@@ -84,9 +84,16 @@ namespace ClasesInstanciables
         private static string MostrarDatos(Universidad uni)
         {
             StringBuilder datos = new StringBuilder();
-            foreach (Jornada aux in uni.Jornadas)
+            
+
+            foreach (Profesor prof in uni.profesores)
             {
-                datos.AppendLine(aux.mostrarDatos());
+                datos.AppendFormat("JORNADA:");
+                datos.AppendLine(prof.ToString());
+                foreach (Jornada aux in uni.Jornadas)
+                {
+                    datos.AppendLine(aux.mostrarDatos());
+                }
             }
             return datos.ToString();
         }
@@ -140,7 +147,7 @@ namespace ClasesInstanciables
                 {
                     retorno = true;
                     break;
-                }
+                }                
             }
             return retorno;
         }
