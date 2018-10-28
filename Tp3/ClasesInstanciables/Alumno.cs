@@ -39,10 +39,22 @@ namespace ClasesInstanciables
         /// <returns></returns>
         protected override string MostrarDatos()
         {
-            StringBuilder datos = new StringBuilder();
-            datos.AppendLine(base.MostrarDatos());
-            datos.AppendFormat("\nEstado de cuenta: {0}", this.estadoCuenta);
-            datos.Append(ParticiparEnClase());
+            StringBuilder datos = new StringBuilder(base.MostrarDatos());
+            string estado = "";
+            if(this.estadoCuenta == EEstadoCuenta.AlDia)
+            {
+                estado += "Cuota al dia";
+            }
+            else if(this.estadoCuenta == EEstadoCuenta.Becado)
+            {
+                estado += "Becado";
+            }
+            else
+            {
+                estado += "Deudor";
+            }
+            datos.AppendFormat("\n\nEstado de cuenta: {0}", estado);
+            datos.Append(ParticiparEnClase());            
             return datos.ToString();            
         }
 
@@ -86,7 +98,7 @@ namespace ClasesInstanciables
         /// </summary>
         /// <returns></returns>
         protected override string ParticiparEnClase()
-        {
+        {            
             return string.Format("\nTOMA CLASE DE {0}", this.claseQueToma);
         }
 

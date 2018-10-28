@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Archivos;
 
 
 namespace ClasesInstanciables
@@ -116,18 +117,32 @@ namespace ClasesInstanciables
             return ToString();
         }
 
-        //public bool Guardar(Jornada jornada)
-        //{
+        public static bool Guardar(Jornada jornada)
+        {
+            bool retorno = false;
+            Texto a = new Texto();
+            string archivo = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "/" + "pruebaTxT";
+            if(a.Guardar(archivo,jornada.ToString()))                
+            {
+                retorno = true;
+            }
+            return retorno;
+        }
 
-        //}
+
+        public static string Leer()
+        {
+            string retorno = "";            
+            string archivo = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "/" + "pruebaTxt";
+            Texto a = new Texto();
+            if(a.Leer(archivo,out string j))
+            {
+                retorno = j.ToString();
+            }
+            return retorno;
+        }
 
 
-        //public string Leer()
-        //{
-        //    return ToString();
-        //}
-
-        
         #endregion
     }
 }

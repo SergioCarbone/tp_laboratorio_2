@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Excepciones;
+using Archivos;
 
 namespace ClasesInstanciables
 {
@@ -70,12 +71,33 @@ namespace ClasesInstanciables
 
         #region Metodos
 
-        //public bool Guardar(Universidad uni)
-        //{
+        public static bool Guardar(Universidad uni)
+        {
+            bool retorno = false;
+            Xml<Universidad> a = new Xml<Universidad>();
+            string archivo = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "/" + "pruebaXml";
+            if (a.Guardar(archivo,uni))
+            {
+                retorno = true;
+            }
+            return retorno;
+        }
 
-        //}
 
-        
+        public static string Leer()
+        {
+            string retorno = "";
+            string archivo = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "/" + "pruebaXml";
+            Xml<Universidad> uni = new Xml<Universidad>();
+            ;
+
+            if (uni.Leer(archivo,out Universidad j))
+            {
+                retorno = j.ToString();
+            }
+            return retorno;
+        }
+
         /// <summary>
         /// 
         /// </summary>
@@ -84,16 +106,19 @@ namespace ClasesInstanciables
         private static string MostrarDatos(Universidad uni)
         {
             StringBuilder datos = new StringBuilder();
-            
-
+            datos.AppendFormat("JORNADA:");
             foreach (Profesor prof in uni.profesores)
-            {
-                datos.AppendFormat("JORNADA:");
+            {                
                 datos.AppendLine(prof.ToString());
-                foreach (Jornada aux in uni.Jornadas)
-                {
-                    datos.AppendLine(aux.mostrarDatos());
+                datos.AppendFormat("CLASES DEL DIA:");
+                datos.AppendFormat("\n\n");
+                datos.AppendFormat("ALUMNOS:");
+                foreach (Alumno aux in uni.alumnos)
+                {                    
+                    datos.AppendFormat("\n{0}",aux.ToString());
                 }
+                datos.AppendFormat("\n<-------------------------------------------->");
+                datos.AppendLine();
             }
             return datos.ToString();
         }

@@ -36,9 +36,9 @@ namespace EntidadesAbstractas
         /// </summary>
         /// <returns></returns>
         protected virtual string MostrarDatos()
-        {
+        {            
             StringBuilder datos = new StringBuilder(base.ToString());           
-            datos.AppendFormat("\nlegajo: {0}", this.legajo);
+            datos.AppendFormat("\n\nlegajo: {0}", this.legajo);
             return datos.ToString();
         }
 
