@@ -103,16 +103,19 @@ namespace ClasesInstanciables
 
         public override string ToString()
         {
-            StringBuilder datos = new StringBuilder();
-            
+            StringBuilder datos = new StringBuilder();            
+            datos.AppendFormat("\nClase de {0} por NOMBRE COMPLETO: {1}", this.Clases, this.instructor.ToString());                                   
+            datos.AppendFormat("\n\nALUMNOS:");
             foreach (Alumno aux in alumnos)
             {
-                datos.AppendFormat("{0}", aux.ToString());
+                datos.AppendFormat("\nNOMBRE COMPLETO: {0}", aux.ToString());
             }
+            datos.AppendFormat("\n<-------------------------------------------->");
+            datos.AppendLine();
             return datos.ToString();
         }
 
-        public string mostrarDatos()
+        public string MostrarDatos()
         {
             return ToString();
         }

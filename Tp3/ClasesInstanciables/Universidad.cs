@@ -107,19 +107,10 @@ namespace ClasesInstanciables
         {
             StringBuilder datos = new StringBuilder();
             datos.AppendFormat("JORNADA:");
-            foreach (Profesor prof in uni.profesores)
+            foreach (Jornada aux in uni.Jornadas)
             {                
-                datos.AppendLine(prof.ToString());
-                datos.AppendFormat("CLASES DEL DIA:");
-                datos.AppendFormat("\n\n");
-                datos.AppendFormat("ALUMNOS:");
-                foreach (Alumno aux in uni.alumnos)
-                {                    
-                    datos.AppendFormat("\n{0}",aux.ToString());
-                }
-                datos.AppendFormat("\n<-------------------------------------------->");
-                datos.AppendLine();
-            }
+                datos.Append(aux.ToString());
+            }           
             return datos.ToString();
         }
 

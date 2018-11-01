@@ -152,7 +152,7 @@ namespace EntidadesAbstractas
         public override string ToString()
         {
             StringBuilder datos = new StringBuilder();
-            datos.AppendFormat("NOMBRE COMPLETO: {0} {1}",this.Apellido, this.Nombre);            
+            datos.AppendFormat("{0} {1}",this.Apellido, this.Nombre);            
             datos.AppendFormat("\nNACIONALIDAD: {0}", this.nacionalidad);            
             return datos.ToString();
         }
