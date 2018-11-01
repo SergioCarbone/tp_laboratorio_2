@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Excepciones", "Excepciones\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Consola", "Consola\Consola.csproj", "{2A0B3C24-A08C-4B83-BB5A-C03637C75146}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject1", "UnitTestProject1\UnitTestProject1.csproj", "{BB0ED882-4945-4368-B533-5B71A40B5A51}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{2A0B3C24-A08C-4B83-BB5A-C03637C75146}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2A0B3C24-A08C-4B83-BB5A-C03637C75146}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2A0B3C24-A08C-4B83-BB5A-C03637C75146}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB0ED882-4945-4368-B533-5B71A40B5A51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB0ED882-4945-4368-B533-5B71A40B5A51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB0ED882-4945-4368-B533-5B71A40B5A51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB0ED882-4945-4368-B533-5B71A40B5A51}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

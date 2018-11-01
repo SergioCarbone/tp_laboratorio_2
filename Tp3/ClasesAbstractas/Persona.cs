@@ -48,8 +48,8 @@ namespace EntidadesAbstractas
                 {
                     if (ValidarDni(this.Nacionalidad, value) != -1)
                     {
-                        this.DNI = value;
-                    }
+                        this.dni = value;
+                    }                    
                 }
                 catch(NacionalidadInvalidaException e)
                 {
