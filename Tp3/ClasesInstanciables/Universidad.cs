@@ -71,6 +71,11 @@ namespace ClasesInstanciables
 
         #region Metodos
 
+        /// <summary>
+        /// Guarda los datos de una universidad en un archivo xml
+        /// </summary>
+        /// <param name="uni"></param>
+        /// <returns></returns>
         public static bool Guardar(Universidad uni)
         {
             bool retorno = false;
@@ -84,6 +89,10 @@ namespace ClasesInstanciables
         }
 
 
+        /// <summary>
+        /// Lee los datos de un archivo y los imprime
+        /// </summary>
+        /// <returns></returns>
         public static string Leer()
         {
             string retorno = "";
@@ -99,7 +108,7 @@ namespace ClasesInstanciables
         }
 
         /// <summary>
-        /// 
+        /// Muestra los datos de una universidad
         /// </summary>
         /// <param name="uni"></param>
         /// <returns></returns>
@@ -116,7 +125,7 @@ namespace ClasesInstanciables
 
 
         /// <summary>
-        /// 
+        /// Se fija si un alumno se encuentra en la universidad
         /// </summary>
         /// <param name="uni"></param>
         /// <param name="a"></param>
@@ -137,7 +146,7 @@ namespace ClasesInstanciables
 
 
         /// <summary>
-        /// 
+        /// Busca si un alumno no se encuentra en una universidad
         /// </summary>
         /// <param name="uni"></param>
         /// <param name="a"></param>
@@ -149,7 +158,7 @@ namespace ClasesInstanciables
 
 
         /// <summary>
-        /// 
+        /// Busca si un profesor se encuentra en una universidad
         /// </summary>
         /// <param name="uni"></param>
         /// <param name="i"></param>
@@ -170,7 +179,7 @@ namespace ClasesInstanciables
 
 
         /// <summary>
-        /// 
+        /// Busca si un profesor no se encuentra en una universidad
         /// </summary>
         /// <param name="uni"></param>
         /// <param name="i"></param>
@@ -181,7 +190,12 @@ namespace ClasesInstanciables
         }
 
 
-
+        /// <summary>
+        /// Busca un profesor que dicte determinada clase
+        /// </summary>
+        /// <param name="uni"></param>
+        /// <param name="clase"></param>
+        /// <returns></returns>
         public static Profesor operator ==(Universidad uni, Universidad.EClases clase)
         {                                   
             foreach (Profesor aux in uni.profesores)
@@ -195,6 +209,12 @@ namespace ClasesInstanciables
         }
 
 
+        /// <summary>
+        /// Busca al primer profesor que dicte una clase
+        /// </summary>
+        /// <param name="uni"></param>
+        /// <param name="clase"></param>
+        /// <returns></returns>
         public static Profesor operator !=(Universidad uni, Universidad.EClases clase)
         {
             Profesor p = null;
@@ -219,7 +239,7 @@ namespace ClasesInstanciables
 
 
         /// <summary>
-        /// 
+        /// Carga una jornada con todos sus datos y los agrega a la universidad
         /// </summary>
         /// <param name="uni"></param>
         /// <param name="clase"></param>
@@ -240,6 +260,12 @@ namespace ClasesInstanciables
         }
 
 
+        /// <summary>
+        /// Agrega un alumno a la lista
+        /// </summary>
+        /// <param name="uni"></param>
+        /// <param name="a"></param>
+        /// <returns></returns>
         public static Universidad operator +(Universidad uni, Alumno a)
         {
             if(uni != a)
@@ -254,6 +280,12 @@ namespace ClasesInstanciables
         }
 
 
+        /// <summary>
+        /// Agrega un profesor a la lista
+        /// </summary>
+        /// <param name="uni"></param>
+        /// <param name="i"></param>
+        /// <returns></returns>
         public static Universidad operator +(Universidad uni, Profesor i)
         {
             if(uni != i)

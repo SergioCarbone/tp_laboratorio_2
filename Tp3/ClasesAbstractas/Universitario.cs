@@ -32,7 +32,7 @@ namespace EntidadesAbstractas
 
 
         /// <summary>
-        /// 
+        /// Muestra los datos de un universitario
         /// </summary>
         /// <returns></returns>
         protected virtual string MostrarDatos()
@@ -44,7 +44,7 @@ namespace EntidadesAbstractas
 
 
         /// <summary>
-        /// 
+        /// Compara si dos universitarios son iguales
         /// </summary>
         /// <param name="pg1"></param>
         /// <param name="pg2"></param>
@@ -61,7 +61,7 @@ namespace EntidadesAbstractas
         }
 
         /// <summary>
-        /// 
+        /// Compara si dos universitarios son distintos
         /// </summary>
         /// <param name="pg1"></param>
         /// <param name="pg2"></param>

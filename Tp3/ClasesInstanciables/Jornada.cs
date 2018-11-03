@@ -70,6 +70,12 @@ namespace ClasesInstanciables
         }
 
 
+        /// <summary>
+        /// Agrega un alumno a una jornada
+        /// </summary>
+        /// <param name="j"></param>
+        /// <param name="a"></param>
+        /// <returns></returns>
         public static Jornada operator +(Jornada j, Alumno a)
         {
             if(j != a)
@@ -80,6 +86,12 @@ namespace ClasesInstanciables
         }
 
 
+        /// <summary>
+        /// Busca si un alumno ya esta cargado en la jornada
+        /// </summary>
+        /// <param name="j"></param>
+        /// <param name="a"></param>
+        /// <returns></returns>
         public static bool operator ==(Jornada j, Alumno a)
         {
             bool retorno = false;
@@ -95,12 +107,22 @@ namespace ClasesInstanciables
         }
 
 
+        /// <summary>
+        /// busca si un alumno no esta cargado en la jornada
+        /// </summary>
+        /// <param name="j"></param>
+        /// <param name="a"></param>
+        /// <returns></returns>
         public static bool operator !=(Jornada j, Alumno a)
         {
             return (!(j == a));
         }
 
 
+        /// <summary>
+        /// Muestra los datos de una jornada
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             StringBuilder datos = new StringBuilder();            
@@ -120,6 +142,11 @@ namespace ClasesInstanciables
             return ToString();
         }
 
+        /// <summary>
+        /// Guarda los datos de una jornada en un archivo txt
+        /// </summary>
+        /// <param name="jornada"></param>
+        /// <returns></returns>
         public static bool Guardar(Jornada jornada)
         {
             bool retorno = false;
@@ -133,6 +160,10 @@ namespace ClasesInstanciables
         }
 
 
+        /// <summary>
+        /// Lee los datos de un archivo txt y los muestra
+        /// </summary>
+        /// <returns></returns>
         public static string Leer()
         {
             string retorno = "";            

@@ -13,6 +13,7 @@ namespace ClasesInstanciables
         private Universidad.EClases claseQueToma;
         private EEstadoCuenta estadoCuenta;
 
+        #region Metodos
 
         public Alumno()
         {
@@ -34,7 +35,7 @@ namespace ClasesInstanciables
 
 
         /// <summary>
-        /// 
+        /// Muestra los datos de un alumno
         /// </summary>
         /// <returns></returns>
         protected override string MostrarDatos()
@@ -60,7 +61,7 @@ namespace ClasesInstanciables
 
 
         /// <summary>
-        /// 
+        /// Se fija si el alumno toma una clase y que no sea deudor
         /// </summary>
         /// <param name="a"></param>
         /// <param name="clase"></param>
@@ -94,7 +95,7 @@ namespace ClasesInstanciables
 
 
         /// <summary>
-        /// 
+        /// Muestra en que clase participa
         /// </summary>
         /// <returns></returns>
         protected override string ParticiparEnClase()
@@ -113,6 +114,7 @@ namespace ClasesInstanciables
         }
 
 
+        #endregion
 
         public enum EEstadoCuenta
         {

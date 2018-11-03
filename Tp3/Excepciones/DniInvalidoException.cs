@@ -13,13 +13,13 @@ namespace Excepciones
         #region Metodos
 
         public DniInvalidoException()
-            : this("")
+            : this("Error en el dni")
         {
 
         }
 
         public DniInvalidoException(Exception e)
-            : this("",e)
+            : this("Error en el dni", e)
         {
 
         }

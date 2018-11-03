@@ -11,6 +11,13 @@ namespace Archivos
     public class Texto : IArchivo<string>
     {
         bool retorno = false;
+
+        /// <summary>
+        /// Guarda la informacion en un archivo de texto
+        /// </summary>
+        /// <param name="archivo"></param>
+        /// <param name="datos"></param>
+        /// <returns></returns>
         public bool Guardar(string archivo, string datos)
         {
             try
@@ -27,6 +34,12 @@ namespace Archivos
             return retorno;
         }
 
+        /// <summary>
+        /// Lee un archivo de texto
+        /// </summary>
+        /// <param name="archivo"></param>
+        /// <param name="datos"></param>
+        /// <returns></returns>
         public bool Leer(string archivo, out string datos)
         {
             try

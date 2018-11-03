@@ -13,9 +13,10 @@ namespace ClasesInstanciables
         private Queue<Universidad.EClases> clasesDelDia;
         private static Random random;
 
+        #region Metodos
 
         /// <summary>
-        /// 
+        /// Agrega dos clases aleatorias
         /// </summary>
         private void RandomClases()
         {
@@ -27,7 +28,7 @@ namespace ClasesInstanciables
 
 
         /// <summary>
-        /// 
+        /// Muestra los datos de un profesor
         /// </summary>
         /// <returns></returns>
         protected override string MostrarDatos()
@@ -41,7 +42,7 @@ namespace ClasesInstanciables
 
 
         /// <summary>
-        /// 
+        /// Se fija si un profesor no dicta una clase
         /// </summary>
         /// <param name="i"></param>
         /// <param name="clase"></param>
@@ -53,7 +54,7 @@ namespace ClasesInstanciables
 
 
         /// <summary>
-        /// 
+        /// Se fija si un profesor da una clase
         /// </summary>
         /// <param name="i"></param>
         /// <param name="clase"></param>
@@ -73,7 +74,7 @@ namespace ClasesInstanciables
         }
 
         /// <summary>
-        /// 
+        /// Muestra las clases que da un profesor
         /// </summary>
         /// <returns></returns>
         protected override string ParticiparEnClase()
@@ -106,13 +107,12 @@ namespace ClasesInstanciables
             RandomClases();
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
+       
         public override string ToString()
         {
             return this.MostrarDatos();
         }
+
+        #endregion
     }
 }

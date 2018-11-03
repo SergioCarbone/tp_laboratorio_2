@@ -146,7 +146,7 @@ namespace EntidadesAbstractas
         }
 
         /// <summary>
-        /// 
+        /// Muestra los datos de una persona
         /// </summary>
         /// <returns></returns>
         public override string ToString()
@@ -158,7 +158,7 @@ namespace EntidadesAbstractas
         }
         
         /// <summary>
-        /// 
+        /// Valida que el dni y la nacionalidad sean correctos
         /// </summary>
         /// <param name="nacionalidad"></param>
         /// <param name="dato"></param>
@@ -184,7 +184,7 @@ namespace EntidadesAbstractas
         }
 
         /// <summary>
-        /// 
+        /// Valida que un dni contenga solo numeros
         /// </summary>
         /// <param name="nacionalidad"></param>
         /// <param name="dato"></param>
@@ -228,7 +228,7 @@ namespace EntidadesAbstractas
         }
 
         /// <summary>
-        /// 
+        /// Valida que un string contenga solo letras
         /// </summary>
         /// <param name="dato"></param>
         /// <returns></returns>
