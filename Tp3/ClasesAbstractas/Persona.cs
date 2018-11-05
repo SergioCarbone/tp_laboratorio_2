@@ -207,18 +207,7 @@ namespace EntidadesAbstractas
             if (esNumero == true)
             {
                 aux = Convert.ToInt32(dato);
-                if (nacionalidad == ENacionalidad.Argentino && aux >= 1 && aux <= 89999999)
-                {
-                    retorno = dato;
-                }
-                else if (nacionalidad == ENacionalidad.Extranjero && aux >= 90000000 && aux <= 99999999)
-                {
-                    retorno = dato;
-                }
-                else
-                {
-                    throw new NacionalidadInvalidaException("La nacionalidad no se condice con el número de DNI");
-                }
+                retorno = Convert.ToString(ValidarDni(nacionalidad, aux));
             }
             else
             {

@@ -50,19 +50,19 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Archivos\Archivos.csproj">
-      <Project>{ac9907af-8548-405d-9e25-b50b6baf3b85}</Project>
+      <Project>{c57d2abb-4a2d-4245-9beb-dfd2b4fda9c6}</Project>
       <Name>Archivos</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ClasesAbstractas\EntidadesAbstractas.csproj">
-      <Project>{506a316f-f27f-4cf7-a667-05c98bfc2c00}</Project>
-      <Name>EntidadesAbstractas</Name>
+    <ProjectReference Include="..\ClasesAbstractas\ClasesAbstractas.csproj">
+      <Project>{9aa3980c-6237-42f3-979a-761d969724d4}</Project>
+      <Name>ClasesAbstractas</Name>
     </ProjectReference>
     <ProjectReference Include="..\ClasesInstanciables\ClasesInstanciables.csproj">
-      <Project>{172e6c68-bef4-4052-8d66-698e089301e0}</Project>
+      <Project>{3ef79ce8-de19-4186-a36d-e3f3a4f28c89}</Project>
       <Name>ClasesInstanciables</Name>
     </ProjectReference>
     <ProjectReference Include="..\Excepciones\Excepciones.csproj">
-      <Project>{5107e454-3bb9-45c8-97f9-6af80053a1c4}</Project>
+      <Project>{ab034677-1be3-47e7-a608-4821a376ff65}</Project>
       <Name>Excepciones</Name>
     </ProjectReference>
   </ItemGroup>

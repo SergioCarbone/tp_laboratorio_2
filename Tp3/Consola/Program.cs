@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Archivos;
 using ClasesInstanciables;
-using EntidadesAbstractas;
+using ClasesAbstractas;
 using Excepciones;
 
 namespace Consola
