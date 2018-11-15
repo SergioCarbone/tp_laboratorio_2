@@ -6,10 +6,13 @@ using System.Threading.Tasks;
 
 namespace EntidadesHechas
 {
-    public delegate void DelegadoEstado(object sender, EventArgs e);
+    
     public class Paquete : IMostrar<Paquete>
     {
+        public delegate void DelegadoEstado(object sender, EventArgs e);
+        public delegate void DelegadoConexion(object sender, Exception inner);
         public event DelegadoEstado InformarEstado;
+        public event DelegadoConexion InformarConexion;
         public enum EEstado
         {
             Ingresado, EnViaje, Entregado
@@ -97,29 +100,15 @@ namespace EntidadesHechas
         /// <returns></returns>
         /// 
 
-        public string MostrarDatos(IMostrar<Paquete> elementos)
+        public string MostrarDatos(IMostrar<Paquete> elemento)
         {
-            List<Paquete> l = (List<Paquete>)((Correo)elementos).Paquetes;
-            string datos = "";            
-            foreach (Paquete p in l)
-            {
-                datos = string.Format("{0} para {1}", p.TrackingID, p.DireccionEntrega);
-            }
+            string datos = "";
+            datos = string.Format("{0} para {1}", ((Paquete)elemento).TrackingID, ((Paquete)elemento).DireccionEntrega);
             // Su código
             return datos;
         }
 
-        //public string MostrarDatos(IMostrar<List<Paquete>> elementos)
-        //{
-        //    List<Paquete> l = (List<Paquete>)((Correo)elementos).Paquetes;
-        //    string datos = "";
-        //    foreach (Paquete p in l)
-        //    {
-        //        datos = string.Format("{0} para {1}", p.TrackingID, p.DireccionEntrega);
-        //    }
-        //    // Su código            
-        //    return datos;
-        //}
+        
 
         /// <summary>
         /// a.	Colocar una demora de 10 segundos.
@@ -132,12 +121,20 @@ namespace EntidadesHechas
         {
             do
             {
-                System.Threading.Thread.Sleep(10000);
+                System.Threading.Thread.Sleep(1000);
                 this.Estado++;
                 // Informar el estado a través de InformarEstado. EventArgs
                 InformarEstado(this.Estado, null);
             } while (this.Estado != EEstado.Entregado);
-            PaqueteDAO.Insertar(this);
+            try
+            {
+                PaqueteDAO.Insertar(this);
+            }
+            catch(Exception e)
+            {
+                InformarConexion(this,e);
+            }
+            
         }
 
         #endregion

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace _20171123_SP_Cartas.Properties
+namespace MainCorreo.Properties
 {
 
 

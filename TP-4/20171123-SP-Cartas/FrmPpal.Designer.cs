@@ -1,4 +1,4 @@
-﻿namespace _20171123_SP_Cartas
+﻿namespace MainCorreo
 {
     partial class FrmPpal
     {

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using EntidadesHechas;
 
-namespace _20171123_SP_Cartas
+namespace MainCorreo
 {
     public partial class FrmPpal : Form
     {
@@ -87,27 +87,34 @@ namespace _20171123_SP_Cartas
         {
             paquete = new Paquete(txtDireccion.Text, mtxtTrackingID.Text);
             paquete.InformarEstado += Paq_InformarEstado;
-            try
+            paquete.InformarConexion += Paq_InformarConexion;
+            foreach (Paquete p in correo.Paquetes)
             {
-                if(correo.Paquetes.Contains(paquete))
+                if (p.TrackingID == paquete.TrackingID)
                 {
                     throw new Exception("Id repetido");
                 }
-                else
-                {
-                    correo.Paquetes.Add(paquete);
-                    ActualizarEstados();
-                }                                
             }
-            catch(Exception w)
-            {
-                //throw new TrackingIdRepetidoException("Error", w);
-            }
+            correo += paquete;
+            ActualizarEstados();
+        }
+
+        private void Paq_InformarConexion(object sender, Exception inner)
+        {
+            MessageBox.Show(inner.Message);
         }
 
         private void Paq_InformarEstado(object sender, EventArgs e)
         {
-            paquete.MockCicloDeVida();
+            if(this.InvokeRequired)
+            {
+                Paquete.DelegadoEstado d = new Paquete.DelegadoEstado(Paq_InformarEstado);
+                this.Invoke(d, new object[] { sender, e });
+            }
+            else
+            {
+                ActualizarEstados();
+            }
         }
 
         /// <summary>

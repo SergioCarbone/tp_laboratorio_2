@@ -43,6 +43,17 @@ namespace EntidadesHechas
         /// <returns></returns>
         public static Correo operator +(Correo c, Paquete p)
         {
+            foreach (Paquete aux in c.paquetes)
+            {
+                if (p.TrackingID == aux.TrackingID)
+                {
+                    throw new TrackingIdRepetidoException("Id repetido");
+                }
+            }
+            c.paquetes.Add(p);
+            Thread hilo = new Thread(p.MockCicloDeVida);
+            c.mockPaquetes.Add(hilo);
+            hilo.Start();
 
             return c;
         }
@@ -55,9 +66,13 @@ namespace EntidadesHechas
         /// <returns></returns>
         public string MostrarDatos(IMostrar<List<Paquete>> elementos)
         {
-            List<Paquete> l = (List<Paquete>)((Correo)elementos).paquetes;
-
-            return "";
+            List<Paquete> l = (List<Paquete>)((Correo)elementos).Paquetes;
+            string datos = "";
+            foreach (Paquete p in l)
+            {
+                datos = string.Format("{0} para {1} ({2})", p.TrackingID, p.DireccionEntrega,p.Estado.ToString());
+            }            
+            return datos;
         }
 
         /// <summary>
@@ -65,7 +80,13 @@ namespace EntidadesHechas
         /// </summary>
         public void FinEntregas()
         {
-
+            foreach (Thread hilo in mockPaquetes)
+            {
+                if(hilo.IsAlive)
+                {
+                    hilo.Abort();
+                }
+            }
         }
 
         #endregion

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace _20171123_SP_Cartas
+namespace MainCorreo
 {
     static class Program
     {

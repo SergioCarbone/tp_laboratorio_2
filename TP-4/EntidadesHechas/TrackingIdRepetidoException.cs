@@ -8,13 +8,13 @@ namespace EntidadesHechas
 {
     public class TrackingIdRepetidoException : Exception
     {
-        TrackingIdRepetidoException(string mensaje)
+        public TrackingIdRepetidoException(string mensaje)
             : this(mensaje,null)
         {
 
         }
 
-        TrackingIdRepetidoException(string mensaje, Exception inner)
+        public TrackingIdRepetidoException(string mensaje, Exception inner)
             : base(mensaje,inner)
         {
 

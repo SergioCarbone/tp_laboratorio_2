@@ -80,7 +80,7 @@
   <ItemGroup>
     <ProjectReference Include="..\EntidadesHechas\Entidades.csproj">
       <Project>{e04f4d81-9fa5-4bad-a965-d390f397b66e}</Project>
-      <Name>EntidadesHechas</Name>
+      <Name>Entidades</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
