@@ -18,6 +18,7 @@ namespace EntidadesHechas
             mockPaquetes = new List<Thread>();
         }
 
+        #region Propiedad
         public List<Paquete> Paquetes
         {
             get
@@ -29,23 +30,21 @@ namespace EntidadesHechas
                 this.paquetes = value;
             }
         }
+        #endregion
 
-        #region Alumno       
+        #region Metodos       
 
         /// <summary>
-        /// a.	Controlar si el paquete ya está en la lista. En el caso de que esté, se lanzará la excepción TrackingIdRepetidoException.
-        /// b.	Agregar el paquete a la lista de paquetes.
-        /// c.	Crear un hilo para el método MockCicloDeVida del paquete, y agregar dicho hilo a mockPaquetes.
-        /// d.	Ejecutar el hilo.
+        /// Agrega un paquete a la lista del correo
         /// </summary>
         /// <param name="c"></param>
         /// <param name="p"></param>
-        /// <returns></returns>
+        /// <returns>retorna el correo</returns>
         public static Correo operator +(Correo c, Paquete p)
         {
             foreach (Paquete aux in c.paquetes)
             {
-                if (p.TrackingID == aux.TrackingID)
+                if (p == aux)
                 {
                     throw new TrackingIdRepetidoException("Id repetido");
                 }
@@ -59,24 +58,23 @@ namespace EntidadesHechas
         }
 
         /// <summary>
-        /// Utilizará string.Format con el siguiente formato "{0} para {1} ({2})", p.TrackingID, p.DireccionEntrega, p.Estado.ToString()
-        /// para retornar los datos de todos los paquetes de su lista
+        /// Muestra los datos de un paquete
         /// </summary>
         /// <param name="elementos"></param>
         /// <returns></returns>
         public string MostrarDatos(IMostrar<List<Paquete>> elementos)
         {
             List<Paquete> l = (List<Paquete>)((Correo)elementos).Paquetes;
-            string datos = "";
+            StringBuilder datos = new StringBuilder();
             foreach (Paquete p in l)
             {
-                datos = string.Format("{0} para {1} ({2})", p.TrackingID, p.DireccionEntrega,p.Estado.ToString());
+                datos.AppendLine( string.Format("{0} para {1} ({2})", p.TrackingID, p.DireccionEntrega,p.Estado.ToString()));
             }            
-            return datos;
+            return datos.ToString();
         }
 
         /// <summary>
-        /// Cerrará todos los hilos ACTIVOS
+        /// Cierra todos los hilos que esten activos
         /// </summary>
         public void FinEntregas()
         {

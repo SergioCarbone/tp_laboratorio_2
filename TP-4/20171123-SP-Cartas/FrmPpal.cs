@@ -19,7 +19,6 @@ namespace MainCorreo
         public FrmPpal()
         {
             InitializeComponent();
-
             correo = new Correo();
         }
 
@@ -39,7 +38,7 @@ namespace MainCorreo
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void mostrarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+        {            
             this.MostrarInformacion<Paquete>((IMostrar<Paquete>)lstEstadoEntregado.SelectedItem);
         }
 
@@ -88,15 +87,16 @@ namespace MainCorreo
             paquete = new Paquete(txtDireccion.Text, mtxtTrackingID.Text);
             paquete.InformarEstado += Paq_InformarEstado;
             paquete.InformarConexion += Paq_InformarConexion;
-            foreach (Paquete p in correo.Paquetes)
+            
+            try
             {
-                if (p.TrackingID == paquete.TrackingID)
-                {
-                    throw new Exception("Id repetido");
-                }
+                correo += paquete;
+                ActualizarEstados();
             }
-            correo += paquete;
-            ActualizarEstados();
+            catch(TrackingIdRepetidoException)
+            {
+                MessageBox.Show("ERROR, id repetido");
+            }            
         }
 
         private void Paq_InformarConexion(object sender, Exception inner)
@@ -129,7 +129,8 @@ namespace MainCorreo
             {
                 this.rtbMostrar.Text = elemento.MostrarDatos(elemento);
                 // Agregar línea para guardar el archivo con el nombre "salida.txt"
-
+                string archivo = "salida.txt";
+                elemento.MostrarDatos(elemento).Guardar(archivo);
             }
         }
 
@@ -137,7 +138,7 @@ namespace MainCorreo
 
         private void FrmPpal_Load(object sender, EventArgs e)
         {
-
+            this.lstEstadoEntregado.ContextMenuStrip = cmsListas;
         }
     }
 }

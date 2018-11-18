@@ -28,6 +28,8 @@ namespace EntidadesHechas
             this.TrackingID = trackingID;
         }
 
+        #region Propiedades
+
         public string DireccionEntrega
         {
             get
@@ -64,58 +66,59 @@ namespace EntidadesHechas
             }
         }
 
+        #endregion
+
+        #region Metodos
         public override string ToString()
         {
             return this.MostrarDatos(this);
         }
 
         /// <summary>
-        /// Dos paquetes serán el mismo si su tracking ID es igual.
+        /// Compara dos paquetes siendo iguales si coinciden sus trackingId
         /// </summary>
         /// <param name="p1"></param>
         /// <param name="p2"></param>
-        /// <returns></returns>
+        /// <returns>true si son iguales - false si no son iguales</returns>
         public static bool operator ==(Paquete p1, Paquete p2)
         {
-            return (p1.trackingID == p2.trackingID);
+            bool retorno = false;
+            if(p1.trackingID == p2.trackingID)
+            {
+                retorno = true;
+            }
+            return retorno;
         }
 
         /// <summary>
-        /// Dos paquetes serán distintos si su tracking ID es distinto.
+        /// Compara dos paquetes siendo distintos si no coinciden sus trackingId
         /// </summary>
         /// <param name="p1"></param>
         /// <param name="p2"></param>
-        /// <returns></returns>
+        /// <returns>true si son distintos - false si no son distintos</returns>
         public static bool operator !=(Paquete p1, Paquete p2)
         {
             return !(p1 == p2);
         }
-
-        #region Alumno
+        
 
         /// <summary>
-        /// MostrarDatos utilizará string.Format con el siguiente formato "{0} para {1}", p.trackingID, p.direccionEntrega
+        /// Muestra los datos de un paquete
         /// </summary>
         /// <param name="elemento"></param>
         /// <returns></returns>
         /// 
-
         public string MostrarDatos(IMostrar<Paquete> elemento)
         {
-            string datos = "";
-            datos = string.Format("{0} para {1}", ((Paquete)elemento).TrackingID, ((Paquete)elemento).DireccionEntrega);
-            // Su código
-            return datos;
+            StringBuilder datos = new StringBuilder();
+            datos.AppendLine(string.Format("{0} para {1}", ((Paquete)elemento).TrackingID, ((Paquete)elemento).DireccionEntrega));
+            return datos.ToString();
         }
 
         
 
         /// <summary>
-        /// a.	Colocar una demora de 10 segundos.
-        /// b.	Pasar al siguiente estado.
-        /// c.	Informar el estado a través de InformarEstado. EventArgs no tendrá ningún dato extra.
-        /// d.	Repetir las acciones desde el punto A hasta que el estado sea Entregado.
-        /// e.	Finalmente guardar los datos del paquete en la base de datos.
+        /// Cambia el estado de los paquetes hasta que cumple es recorrido y guarda en la base de datos
         /// </summary>
         public void MockCicloDeVida()
         {

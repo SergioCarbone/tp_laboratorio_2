@@ -224,7 +224,8 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmPpal";
-            this.Text = "Correo UTN por Nombre.Apellido.Division";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Correo UTN por Sergio.Carbone 2 C";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmPpal_FormClosing);
             this.Load += new System.EventHandler(this.FrmPpal_Load);
             this.groupBox1.ResumeLayout(false);
